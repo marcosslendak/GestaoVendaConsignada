@@ -1,0 +1,316 @@
+
+
+
+Para criar ou atualizar o banco de dados utilize:
+python3 manage.py makemigrations DjPedido
+python3 manage.py sqlmigrate DjPedido 0001
+python3 manage.py migrate
+
+Para criar usuário:
+python3 manage.py createsuperuser
+
+
+sudo python3 manage.py graph_models -a -o Gestão_de_Venda_Consignada.png
+
+
+
+pip3 suits
+sudo pip3 install django-ajax-selects
+
+
+Dicas:
+
+https://django-portuguese.readthedocs.io/en/1.0/topics/db/queries.html
+https://docs.djangoproject.com/pt-br/1.11/howto/custom-model-fields/
+
+
+
+
+https://docs.djangoproject.com/en/dev/topics/db/queries/#backwards-related-objects
+
+
+https://stackoverflow.com/questions/21770561/django-get-attributes-from-foreign-keys-class
+https://stackoverflow.com/questions/9622047/django-accessing-foreignkey-model-objects
+
+
+https://groups.google.com/forum/#!topic/django-brasil/S9LGZXGYOyw
+
+
+https://pt.stackoverflow.com/questions/52125/como-construir-uma-queryset-que-retorne-apenas-os-carros-com-a-ultima-revis%C3%A3o-ap
+https://pt.stackoverflow.com/questions/102503/total-e-subtotal-em-template-de-django-usando-listas-pr%C3%A9-definidas
+
+https://lincolnloop.com/blog/django-anti-patterns-signals/
+
+
+https://simpleisbetterthancomplex.com/tutorial/2016/07/28/how-to-create-django-signals.html
+
+https://github.com/marinho/aprendendo-django
+https://github.com/marinho/aprendendo-django/blob/master/24-fazendo-mais-coisas-na-aplicacao-de-contas-pessoais.md
+
+https://docs.djangoproject.com/en/1.11/ref/signals/
+
+
+https://www.youtube.com/watch?v=5SfdL1seDoE
+
+https://linevi.ch/en/django-inline-in-fieldset.html
+
+
+https://django-portuguese.readthedocs.io/en/1.0/ref/contrib/admin.html
+
+
+
+https://docs.djangoproject.com/en/1.11/topics/forms/modelforms/
+
+
+https://devcenter.heroku.com/categories/heroku-postgres
+
+https://stackoverflow.com/questions/33218954/copy-value-from-different-model-when-djangoadmin-creates-object
+
+https://stackoverflow.com/questions/33176114/copy-a-django-model-instance-including-all-its-relations
+
+
+
+
+
+http://www.andrefonseca.net/blog/2011/11/25/customizando-a-renderizacao-do-template-de-form-do-admin-do-django/
+
+https://django-portuguese.readthedocs.io/en/1.0/intro/tutorial01.html
+
+https://django-portuguese.readthedocs.io/en/1.0/intro/tutorial03.html
+
+Django + JQuery:
+http://www.tangowithdjango.com/book17/chapters/jquery.html
+
+
+*-**-*
+
+http://www3.ifrn.edu.br/~jurandy/tp4/tutorial-django-djura/intro/tutorial02.html
+
+
+
+
+https://stackoverflow.com/questions/5827590/css-styling-in-django-forms
+
+http://pythonclub.com.br/criar-site-com-form-lista-30-min.html
+
+https://pt.slideshare.net/marinho/construindo-sistemas-com-django
+
+
+http://github.com/marinho/django-pyconbrasil2009-sistemas 
+
+
+https://pt.slideshare.net/asergionogueira/django-mdulo-bsico-desenvolvimento-de-uma-aplicao-web
+
+
+https://pt.slideshare.net/sirlagged/introduo-ao-framework-django
+
+
+
+
+**************
+Plugins Úteis: django-geoposition - Como incorporar o google maps dentro do admin para geolocalização
+http://djangoweb.blogspot.com.br/search/label/Django%2FPython
+**************
+
+http://djangoweb.blogspot.com.br/search/label/Django%2FPython?updated-max=2013-08-23T15:46:00-03:00&max-results=20&start=20&by-date=false
+Personalizando o template Inline de um model
+Para colocar um template personalizado no seu inline, basta adicionar atributo template no seu Inline, como no exemplo abaixo:
+
+class FotoInline(admin.TabularInline):
+    template = 'admin/galeria/edit_inline/tabular.html'
+    model = Foto
+    extra = 5
+
+**************************
+https://groups.google.com/forum/#!topic/django-brasil/BC9YUrWA5Xk
+change_form.html
+
+http://digitalbush.com/projects/masked-input-plugin/
+
+https://groups.google.com/forum/#!topic/python-brasil/oFfm6uCshRA
+
+https://imasters.com.br/artigo/24022/jquery/como-criar-mascaras-com-jquery-mask-plugin?trace=1519021197&source=single
+**************************
+
+http://markmail.org/message/7frlo6bwzlb6eake
+
+https://groups.google.com/forum/#!topic/django-brasil/c-vVmf0CyZY
+
+Google: como incorporar django jquery
+
+
+https://github.com/miki725/Django-jQuery-File-Uploader-Integration-demo
+
+https://pt.stackoverflow.com/questions/112249/calcular-input-com-formata%C3%A7%C3%A3o-mascara
+
+
+https://groups.google.com/forum/#!topic/django-brasil/kAN_A-aW23Y
+
+https://desenvolvimentoaberto.org/2015/01/23/django-usando-javascript-python-linux/
+
+http://coreymaynard.com/blog/adding-jquery-event-listeners-to-dynamically-creat/
+
+
+https://gist.github.com/rafjaa/1710324
+
+
+https://aliteralmind.wordpress.com/2014/09/21/jquery_django_tutorial/
+
+
+http://lucianoratamero.github.io/talks/
+
+https://imasters.com.br/artigo/10824/desenvolvimento/aplicacoes-rapidas-para-web-com-django/?trace=1519021197&source=single
+
+
+
+https://coderwall.com/p/lhw25a/jquery-ajax-json-on-django
+
+
+https://groups.google.com/forum/#!topic/django-brasil/-6IKYcuq_8U
+
+
+https://gist.github.com/rafjaa/1710324
+
+
+https://github.com/vitorh45/customuser/tree/master/customuser
+
+https://github.com/vitorh45
+
+fiz um exemplo aqui de como utilizar o masked no admin
+https://github.com/vitorh45/customuser/tree/master/customuser .
+basicamente vc adiciona seus js na pasta dos arquivos estáticos e no admin
+referencia eles.
+
+
+
+https://docs.djangoproject.com/en/1.11/topics/forms/modelforms/
+
+
+
+
+**************
+https://pt.stackoverflow.com/questions/195684/django-formset-calcular-total-com-jquery
+https://pt.stackoverflow.com/questions/138072/m%C3%A1scaras-com-jquery-telefone-cpf-e-cnpj
+
+******************
+
+https://code.djangoproject.com/ticket/13473
+
+Pergunta:
+https://pt.stackoverflow.com/questions/232446/django-mascara-cpf-ddd-e-n%C3%BAmero-do-telefone
+
+
+
+
+
+https://wsvincent.com/format-phone-numbers-in-django/
+
+
+
+pip install django-localflavor
+pip install django-phonenumber-field
+
+
+https://docs.djangoproject.com/en/dev/ref/settings/#std:setting-STATIC_URL
+
+https://docs.djangoproject.com/en/dev/howto/static-files/
+
+
+Template nija:
+https://github.com/wo0dyn/django-template-bootstrap/blob/master/template_bootstrap/templates/template.html
+
+http://django-adminlte2.readthedocs.io/en/latest/templates_and_blocks.html
+
+
+https://bogdan.students.wmi.amu.edu.pl/education/python%20i%20django/Django_3.html
+
+
+<body>
+    {% block header %}{% endblock %}
+    {% block content %}{% endblock %}
+    {% block footer %}{% endblock %}
+  </body>
+
+http://code.djangoproject.com/ticket/10975
+
+
+
+Balas:
+http://djangoweb.blogspot.com.br/2015/09/plugins-uteis-django-geoposition-como.html
+
+http://digitalbush.com/projects/masked-input-plugin/
+
+
+
+
+*********************************************
+http://grokbase.com/t/gg/django-brasil/12b62gwyfw/m%C3%A1scaras-cpf-cnpj-telefone-e-data
+
+
+*{% extends "admin/change_form.html" %}*
+
+*{% block extrahead %}*
+
+* {{ block.super }}*
+
+* *<script type=*"text/javascript"* src=*"{{
+STATIC_URL}}js/jquery-1.7.2.min.js"*></script>**
+
+* *<script type=*"text/javascript"* src=*"{{
+STATIC_URL}}js/jquery.mask.js"*></script>**
+
+* *<script type=*"text/javascript"*>
+
+         *var* $a *=* jQuery.noConflict*();*
+
+         $a*(**function**(*$a*){*
+
+                         $a*(*"#id_do_campo"*).*mask*(*"(99) 9999-9999"*);*
+
+                         //ex.: $a("#input_telefone").mask("(99) 9999-9999");
+
+         *});*
+
+     </script>**
+
+*{% endblock %}*
+*********************************************
+
+Importante:
+https://docs.djangoproject.com/pt-br/1.11/ref/models/instances/
+
+https://www.webforefront.com/django/modelmethodsandmetaoptions.html
+
+
+Plugin:
+https://djangopackages.org/packages/p/django-grappelli/
+https://djangopackages.org/packages/p/django-autocomplete-light/
+
+https://djangopackages.org/packages/p/django-redis/
+
+https://djangopackages.org/packages/p/django-cms/
+
+https://djangopackages.org/packages/p/django-countries-github/
+
+https://djangopackages.org/packages/p/django-model-utils/
+
+https://github.com/gregmuellegger/django-mobile
+
+
+https://djangopackages.org/packages/p/django-crispy-forms/
+
+https://djangopackages.org/packages/p/django-allauth/
+
+
+
+https://www.youtube.com/watch?v=P5qSbBaBzz0
+
+https://www.youtube.com/channel/UCGpWlAQz1paU6I4SFAEdyug
+
+
+http://www.atpcsistemas.com.br/
+
+
+
+
+

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+<title>{% block title %}Gestão de Venda Consignada{% endblock %}</title>
+
+{% csrf_token %}
+
+{% block content %}
+    {{ form.as_p }}
+
+
+        {{ block.super }}
+    <script type="text/javascript">
+         var $a = jQuery.noConflict();
+         $a(function($a){$a("#id_nrTelCelular").mask("(99) 9999-9999");});
+     </script>
+{% endblock content %}
