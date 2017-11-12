@@ -56,7 +56,7 @@ requests==2.2.1
 six==1.5.2
 #software-center-aptd-plugins==0.0.0
 static3==0.7.0
-system-image==2.2
+#system-image==2.2
 ubuntu-drivers-common==0.0.0
 ufw==0.34-rc-0ubuntu2
 unattended-upgrades==0.1
