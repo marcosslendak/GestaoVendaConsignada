@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4ea8fb0-b065-4a07-a996-a6ab5855998c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pedido/settings.py" afterPath="$PROJECT_DIR$/Pedido/settings.py" />
-    </list>
+    <list default="true" id="c4ea8fb0-b065-4a07-a996-a6ab5855998c" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -168,6 +166,7 @@
       <find>ROOT_URLCONF</find>
       <find>STATIC_ROOT</find>
       <find>STATIC_URL</find>
+      <find>disable</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
