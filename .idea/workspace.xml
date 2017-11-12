@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4ea8fb0-b065-4a07-a996-a6ab5855998c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pedido/settings.py" afterPath="$PROJECT_DIR$/Pedido/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Pedido/wsgi.py" afterPath="$PROJECT_DIR$/Pedido/wsgi.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements-dev.txt" afterPath="$PROJECT_DIR$/requirements-dev.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/runtime.txt" afterPath="$PROJECT_DIR$/runtime.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -186,6 +181,7 @@
         <option value="$PROJECT_DIR$/.emv" />
         <option value="$PROJECT_DIR$/Pedido/settings.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/runtime.txt" />
       </list>
     </option>
   </component>
@@ -661,7 +657,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DjPedido/migrations/0003_auto_20170813_2041.py" />
     <entry file="file://$PROJECT_DIR$/DjPedido/migrations/0004_auto_20170814_0241.py" />
     <entry file="file://$PROJECT_DIR$/DjPedido/migrations/0007_auto_20170826_0538.py" />
     <entry file="file://$PROJECT_DIR$/DjPedido/migrations/0008_auto_20170826_2227.py" />
@@ -959,6 +954,14 @@
           <folding>
             <element signature="e#310#319#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runtime.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
