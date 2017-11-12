@@ -10,7 +10,7 @@ MarkupSafe==0.18
 chardet==2.2.1
 checkbox-ng==0.3
 checkbox-support==0.2
-click==0.4.21.1ubuntu0.2
+#click==0.4.21.1ubuntu0.2
 colorama==0.2.5
 command-not-found==0.3
 defer==1.0.6
