@@ -39,7 +39,7 @@ oauthlib==0.6.1
 phonenumberslite==8.8.0
 piston-mini-client==0.7.5
 plainbox==0.5.3
-progressbar==2.3
+#progressbar==2.3
 pycrypto==2.6.1
 pycurl==7.19.3
 pygobject==3.12.0
