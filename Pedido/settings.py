@@ -12,6 +12,10 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 import pygraphviz
+from decouple import config
+#from unipath import Path
+from dj_database_url import parse as dburl
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 from django.conf.global_settings import MANAGERS
@@ -23,16 +27,16 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '+-!h86m#tvky1o^7y0^nyrht+co+$_)bwc43f98qak4f*m29)t'
+SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', default=False, cast=bool)
 
 #ADMINS = (('Antônio Marcos Krug Slendak', 'marcos.slendak@gmail.com'),)
 #MANAGERS = ADMINS
 #SEND_BRO
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['gestao-venda-consignada.herokuapp.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -90,12 +94,17 @@ WSGI_APPLICATION = 'Pedido.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#    }
+#}
+
+default_dburl = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
+
+DATABASES = { 'default': config('DATABASE_URL', default=default_dburl, cast=dburl), }
+
 
 
 # Password validation
@@ -202,6 +211,10 @@ SUIT_CONFIG = {
 
 #STATIC_URL = '/static/'
 STATIC_URL = '/assets/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "assets")

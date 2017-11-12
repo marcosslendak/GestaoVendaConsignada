@@ -99,3 +99,14 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# Heroku
+.env
+
+# Backpu
+*.*~
+*~
+
+# SGDB
+*.sqlite3
+
