@@ -20,8 +20,7 @@ from dj_database_url import parse as dburl
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 from django.conf.global_settings import MANAGERS
 
-#BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
@@ -45,12 +44,12 @@ ALLOWED_HOSTS = ['gestao-venda-consignada.herokuapp.com', 'localhost', '127.0.0.
 INSTALLED_APPS = [
     'suit',
     #'grappelli',
-    'django_extensions',
+#    'django_extensions',
     #'djando-dia',
-    'localflavor',
-    'phonenumber_field',
-    'input_mask',
-    'ajax_select',
+#    'localflavor',
+#    'phonenumber_field',
+#    'input_mask',
+#    'ajax_select',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -103,7 +102,6 @@ WSGI_APPLICATION = 'Pedido.wsgi.application'
 #}
 
 default_dburl = 'sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')
-
 DATABASES = { 'default': config('DATABASE_URL', default=default_dburl, cast=dburl), }
 
 
