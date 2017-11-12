@@ -79,7 +79,7 @@ static3==0.7.0
 #unity-scope-yelp==0.1
 #unity-scope-zotero==0.1
 urllib3==1.7.1
-usb-creator==0.2.23
+#usb-creator==0.2.23
 virtualenv==15.1.0
 wheel==0.24.0
 xdiagnose==3.6.3build2
