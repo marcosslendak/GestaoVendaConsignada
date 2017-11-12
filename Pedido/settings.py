@@ -20,7 +20,8 @@ from dj_database_url import parse as dburl
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 from django.conf.global_settings import MANAGERS
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+#BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 # Quick-start development settings - unsuitable for production
@@ -212,10 +213,8 @@ SUIT_CONFIG = {
 #STATIC_URL = '/static/'
 STATIC_URL = '/assets/'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
-
-
+#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.normpath(os.path.join(BASE_DIR, 'staticfiles'))
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "assets")
 ]
