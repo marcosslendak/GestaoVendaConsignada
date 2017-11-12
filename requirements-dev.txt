@@ -14,7 +14,7 @@ checkbox-support==0.2
 colorama==0.2.5
 #command-not-found==0.3
 #defer==1.0.6
-dell-recovery==0.0.0
+#dell-recovery==0.0.0
 dj-database-url==0.4.2
 dj-static==0.0.6
 django-ajax-selects==1.6.0
