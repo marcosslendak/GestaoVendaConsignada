@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c4ea8fb0-b065-4a07-a996-a6ab5855998c" name="Default" comment="" />
+    <list default="true" id="c4ea8fb0-b065-4a07-a996-a6ab5855998c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements-dev.txt" afterPath="$PROJECT_DIR$/requirements-dev.txt" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +63,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DjPedido/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="252">
@@ -69,6 +71,16 @@
               <folding>
                 <element signature="e#0#55#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requirements-dev.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/requirements-dev.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="163">
+              <caret line="60" column="12" lean-forward="true" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -162,7 +174,6 @@
         <option value="$PROJECT_DIR$/.emv" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/runtime.txt" />
-        <option value="$PROJECT_DIR$/requirements-dev.txt" />
         <option value="$PROJECT_DIR$/DjPedido/admin.py" />
         <option value="$PROJECT_DIR$/DjPedido/print.py" />
         <option value="$PROJECT_DIR$/DjPedido/models.py" />
@@ -176,6 +187,7 @@
         <option value="$PROJECT_DIR$/DjPedido/templates/DjPedido/pdlist.html" />
         <option value="$PROJECT_DIR$/DjPedido/urls.py" />
         <option value="$PROJECT_DIR$/DjPedido/views.py" />
+        <option value="$PROJECT_DIR$/requirements-dev.txt" />
       </list>
     </option>
   </component>
@@ -574,6 +586,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="56" y="-11" width="1311" height="780" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925585" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -582,7 +595,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3348281" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23834988" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23834988" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -862,13 +875,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/requirements-dev.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1044">
-          <caret line="58" column="9" lean-forward="false" selection-start-line="58" selection-start-column="8" selection-end-line="58" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -960,6 +966,14 @@
           <folding>
             <element signature="e#0#55#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements-dev.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="60" column="12" lean-forward="true" selection-start-line="60" selection-start-column="12" selection-end-line="60" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
