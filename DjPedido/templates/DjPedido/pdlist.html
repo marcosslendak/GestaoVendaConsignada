@@ -1,0 +1,147 @@
+    {% extends 'base.html' %}
+    {% load humanize %}
+    {% load mathfilters %}
+    {% load tags %}
+    <title>{% block title %}Gestão de Venda Consignada{% endblock %}</title>
+
+    {% csrf_token %}
+
+    {% block sidebar %}
+        <li class="active">Devoluções de pedidos</li>
+    {% endblock %}
+
+    {% block content %}
+        {{ form.as_p }}
+        {{ block.super }}
+
+        {% define 0 as idSupervisor %}
+        {% define 0 as idVendedor %}
+
+        {% define 0 as comissaoTotalSupervisor %}
+        {% define 0 as comissaoTotalVendedor %}
+
+        <div>
+
+        {% for itensPedidoDevolucao in itensPedidoDevolucoes %}
+
+            {% ifnotequal itensPedidoDevolucao.idPedido.idSupervisor idSupervisor %}
+                {% define itensPedidoDevolucao.idPedido.idSupervisor as idSupervisor %}
+
+                {% if comissaoTotalSupervisor > 0 or comissaoTotalVendedor > 0 %}
+                    <table border="1" width="100%" height="10%" align="center">
+                        <tr>
+                            <td align=center width="70%">Total</td>
+                            <td align=center width="10%">{{ comissaoTotalSupervisor|floatformat:2 }}</td>
+                            <td align=center width="10%">{{ comissaoTotalVendedor|floatformat:2 }}</td>
+                        </tr>
+                    </table>
+                    {% define 0 as comissaoTotalSupervisor %}
+                    {% define 0 as comissaoTotalVendedor %}
+                {% endif %}
+                <table border="1" width="100%" height="10%" align="center">
+                    <tr bgcolor="#DCDCDC">
+                        <td align=center width="70%">Supervisor</td>
+                        <td align=center width="30%">% Comissão</td>
+                    </tr>
+                    <tr>
+                        <td align=center>{{ itensPedidoDevolucao.idPedido.idSupervisor }}</td>
+                        <td align=center>{{ itensPedidoDevolucao.idPedido.idSupervisor.comissao|floatformat:2 }}</td>
+                    </tr>
+                </table>
+
+            {% endifnotequal %}
+
+            {% ifnotequal itensPedidoDevolucao.idPedido.idVendedor idVendedor %}
+                {% define itensPedidoDevolucao.idPedido.idVendedor as idVendedor %}
+                {% if comissaoTotalSupervisor > 0 or comissaoTotalVendedor > 0 %}
+                    <table border="1" width="100%" height="10%" align="center">
+                        <tr>
+                            <td align=center width="70%">Total</td>
+                            <td align=center width="10%">{{ comissaoTotalSupervisor|floatformat:2 }}</td>
+                            <td align=center width="10%">{{ comissaoTotalVendedor|floatformat:2 }}</td>
+                        </tr>
+                    </table>
+                    {% define 0 as comissaoTotalSupervisor %}
+                    {% define 0 as comissaoTotalVendedor %}
+                {% endif %}
+                <br>
+                <table border="1" width="100%" height="10%" align="center">
+                    <tr bgcolor="#DCDCDC">
+                        <td align=center width="70%">Vendedor</td>
+                        <td align=center width="30%">% Comissão</td>
+                    </tr>
+                    <tr>
+                        <td align=center>{{ itensPedidoDevolucao.idPedido.idVendedor }}</td>
+                        <td align=center>{{ itensPedidoDevolucao.idPedido.idVendedor.comissao|floatformat:2 }}</td>
+                    </tr>
+                </table>
+            {% endifnotequal %}
+
+            {% ifnotequal itensPedidoDevolucao.idPedido.dtPedido dtPedido %}
+                {% define itensPedidoDevolucao.idPedido.dtPedido as dtPedido %}
+                <br>
+                <p align="center">
+                    <font size="3"><b>Data do pedido: {{ itensPedidoDevolucao.idPedido.dtPedido }}</b></font>
+                </p>
+
+                <table border="1" width="100%" height="10%" align="center">
+
+                    <tr bgcolor="#DCDCDC">
+                        <td align=center width="30%">Item</td>
+                        <td align=center width="10%">Qtd. Solicitada</td>
+                        <td align=center width="10%">Qtd. Devolvida</td>
+                        <td align=center width="10%">Preço Unitário R$</td>
+                        <td align=center width="10%">Total R$</td>
+                        <td align=center width="10%">Comissão Supervisor R$</td>
+                        <td align=center width="10%">Comissão Vendedor R$</td>
+                    </tr>
+            {% endifnotequal %}
+
+            {% define itensPedidoDevolucao.qtdSolicitada|sub:itensPedidoDevolucao.qtdDevolvida as qtdVendida %}
+
+            {% if qtdVendida > 0 %}
+
+                {% define qtdVendida|mul:itensPedidoDevolucao.precoUnitario as total %}
+                {% define total|mul:itensPedidoDevolucao.idPedido.idSupervisor.comissao|div:100 as comissaoSupervisor %}
+                {% define total|mul:itensPedidoDevolucao.idPedido.idVendedor.comissao|div:100 as comissaoVendedor %}
+
+
+
+                    <tr>
+                        <td align=center>{{ itensPedidoDevolucao.idItem }}</td>
+                        <td align=center>{{ itensPedidoDevolucao.qtdSolicitada }}</td>
+                        <td align=center>{{ itensPedidoDevolucao.qtdDevolvida }}</td>
+                        <td align=center>{{ itensPedidoDevolucao.precoUnitario|floatformat:2 }}</td>
+                        <td align=center>{{ total|floatformat:2 }}</td>
+                        <td align=center>{{ comissaoSupervisor|floatformat:2 }}</td>
+                        <td align=center>{{ comissaoVendedor|floatformat:2 }}</td>
+                    </tr>
+
+                {% define comissaoSupervisor|addition:comissaoTotalSupervisor as somaTotal %}
+                {% define somaTotal as comissaoTotalSupervisor %}
+
+                {% define comissaoVendedor|addition:comissaoTotalVendedor as somaTotal %}
+                {% define somaTotal as comissaoTotalVendedor %}
+
+
+            {% endif %}
+
+
+            {% if forloop.last %}
+                    <table border="1" width="100%" height="10%" align="center">
+                        <tr>
+                            <td align=center width="70%">Total</td>
+                            <td align=center width="10%">{{ comissaoTotalSupervisor|floatformat:2 }}</td>
+                            <td align=center width="10%">{{ comissaoTotalVendedor|floatformat:2 }}</td>
+                        </tr>
+                    </table>
+                </table>
+            {% endif %}
+
+        {% endfor %}
+
+        </div>
+
+    {% endblock content %}
+
+

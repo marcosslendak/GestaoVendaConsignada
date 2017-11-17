@@ -31,9 +31,13 @@ SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
+TEMPLATE_DEBUG = DEBUG
 
-#ADMINS = (('Antônio Marcos Krug Slendak', 'marcos.slendak@gmail.com'),)
-#MANAGERS = ADMINS
+ADMINS = (
+    ('Antônio Marcos Krug Slendak', 'marcos.slendak@gmail.com'),
+)
+MANAGERS = ADMINS
+
 #SEND_BRO
 
 ALLOWED_HOSTS = ['gestao-venda-consignada.herokuapp.com', 'localhost', '127.0.0.1']
@@ -50,6 +54,8 @@ INSTALLED_APPS = [
 #    'phonenumber_field',
 #    'input_mask',
 #    'ajax_select',
+
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -57,6 +63,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'DjPedido.apps.DjpedidoConfig',
+    'report_builder',
+    'mathfilters',
+    'django.contrib.humanize',
+#    'admin_reports',
 ]
 
 MIDDLEWARE = [
@@ -83,6 +93,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.static',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -131,14 +143,22 @@ AUTH_PASSWORD_VALIDATORS = [
 #LANGUAGE_CODE = 'en-us'
 LANGUAGE_CODE = 'pt-br'
 
-TIME_ZONE = 'UTC'
+#TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 
-USE_L10N = True
+#USE_L10N = True
+#USE_TZ = True
 
-USE_TZ = True
+# Date format
+DATE_INPUT_FORMATS = ('%d/%m/%Y', )
+DATE_FORMAT = 'd/m/Y'
+SHORT_DATE_FORMAT = 'd/m/Y'
+DATETIME_FORMAT = 'j N Y, H:i'
+SHORT_DATETIME_FORMAT = 'j N Y, H:i'
 
+USE_THOUSAND_SEPARATOR = True
 
 SUIT_CONFIG = {
     # header
@@ -178,23 +198,11 @@ SUIT_CONFIG = {
            )},
            '-',
            {'label': 'Relatório', 'icon': 'icon-th-list', 'models': (
-               {'label': u'Listado de fichas de fármacos', 'blank': True, 'icon': 'icon-th-list', 'url': '/farmacos/'},
+               {'label': u'Lista devoluções de pedidos', 'blank': True, 'icon': 'icon-th-list', 'url': '/pdlist'},
                {'label': 'Listado de fichas de problemas', 'blank': True, 'icon': 'icon-th-list', 'url': '/problemas/'},
            )},
 
 
-
-
-#           {'label': 'Cadastro', 'icon':'icon-edit', 'models': (
-#               {'label': 'Colaboradores', 'icon':'icon-edit', 'models': (
-#                   {'label': 'Supervisor', 'url': '/admin/DjPedido/supervisor/'},
-#                   {'label': 'Vendedor', 'url': '/admin/DjPedido/vendedor/'}
-#               )},
-#               {'label': 'Item', 'url': '/admin/DjPedido/item/'}
-#           )},
-#           {'label': 'Pedido', 'icon': 'icon-keyboard', 'url': ('/admin/DjPedido/pedido/')},
-#           {'label': 'Settings', 'icon':'icon-cog', 'models': ('auth.user', 'auth.group')},
-#    ##       {'label': 'Support', 'icon':'icon-question-sign', 'url': '/support/'},
        ),
 
 
@@ -211,7 +219,7 @@ SUIT_CONFIG = {
 #STATIC_URL = '/static/'
 STATIC_URL = '/assets/'
 
-#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 STATIC_ROOT = os.path.normpath(os.path.join(BASE_DIR, 'staticfiles'))
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "assets")

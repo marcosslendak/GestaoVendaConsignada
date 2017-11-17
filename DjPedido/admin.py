@@ -4,13 +4,17 @@ from django.contrib import admin
 from DjPedido.models import Item, Pedido, ItensPedido, Colaborador, Supervisor, Vendedor, PedidoSolicitacao,  PedidoDevolucao
 from django.utils.safestring import mark_safe
 from localflavor.br.forms import BRCPFField
+from django.http import HttpResponse, HttpResponseRedirect
     #, BRZipCodeField, STATE_CHOICES, BRStateChoiceField
 
 # Register your models here.
 
+#def pdf_version(modeladmin, request, queryset):
+#    url = '/your_pdf_url/?pks=' + ','.join([q.pk for q in queryset])
+#    HttpResponseRedirect(url)
+
 class ColaboradorAdmin(admin.ModelAdmin):
     model = Colaborador
-
     fieldsets = [
         ['Informações pessoais', {
             'fields': ['nome',('cpf', 'dtNascimento'), ('sexo', 'estado_civil'), 'email']
@@ -24,6 +28,7 @@ class ColaboradorAdmin(admin.ModelAdmin):
                     'bairro', 'cidade', 'estado', 'nrTelCelular', 'nrTelFixo']
     list_filter = ['sexo', 'estado_civil']
     search_fields = ['nome']
+#    actions = [pdf_version]
 admin.site.register(Colaborador, ColaboradorAdmin)
 
 

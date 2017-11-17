@@ -11,6 +11,8 @@ from django.forms.models import BaseModelFormSet
 
 # Create your models here.
 
+#REPORT_BUILDER_MODEL_MANAGER = 'on_site'
+
 SEXO_CHOICES = (
     ('M', u'Masculino'),
     ('F', u'Feminino'),
@@ -73,6 +75,8 @@ class Vendedor(models.Model):
 
 
 class Item(models.Model):
+#    report_builder_model_manager = 'on_site'
+    REPORT_BUILDER_INCLUDE = []
     descricao = models.CharField(max_length=60, verbose_name='Descrição')
     ean = models.CharField(max_length=13, verbose_name='EAN')
     precoCusto = models.DecimalField(max_digits=8, decimal_places=2, verbose_name='Preço custo')
