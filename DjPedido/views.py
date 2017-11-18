@@ -15,29 +15,31 @@ def relatorio(request):
 #    context = {'form':form}
 #    return render(request, 'DjPedido/colaborador.html', context)
 
-def pedidoDevolucoes_list(request):
-    #itensPedidoDevolucoes = ItensPedido.objects.select_related('idPedido').prefetch_related('')
 
-#    itensPedidoDevolucoes = ItensPedido.objects.select_related('idPedido').filter(idPedido__solicitando=False, idPedido__fechado=False).order_by(
-#    'idPedido__idSupervisor',
-#    'idPedido__idVendedor',
-#    'idPedido__dtPedido',
-#    'idPedido')
-
-
-    #qtdSolicitada = models.IntegerField(default=1, blank=False, verbose_name='Quantidade solicitada')
-    #qtdDevolvida
-
-    #idIte
-
-    itensPedidoDevolucoes = ItensPedido.objects.select_related('idPedido').filter(idPedido__solicitando=False, idPedido__fechado=False).order_by(
+def listPedidosSolicitacao(request):
+    itensPedidosSolicitacao = ItensPedido.objects.select_related('idPedido').filter(idPedido__solicitando=True, idPedido__fechado=False).order_by(
         'idPedido__idSupervisor',
         'idPedido__idVendedor',
         'idPedido__dtPedido',
         'idPedido')
+    return render(request, 'DjPedido/listPedidosSolicitacao.html', {'itensPedidosSolicitacao': itensPedidosSolicitacao})
 
 
+def listPedidosDevolucao(request):
+    itensPedidosDevolucao = ItensPedido.objects.select_related('idPedido').filter(idPedido__solicitando=False, idPedido__fechado=False).order_by(
+        'idPedido__idSupervisor',
+        'idPedido__idVendedor',
+        'idPedido__dtPedido',
+        'idPedido')
+    return render(request, 'DjPedido/listPedidosDevolucao.html', {'itensPedidosDevolucao': itensPedidosDevolucao})
 
-    return render(request, 'DjPedido/pdlist.html', {'itensPedidoDevolucoes': itensPedidoDevolucoes})
+
+def listPedidosFechado(request):
+    itensPedidosFechado = ItensPedido.objects.select_related('idPedido').filter(idPedido__solicitando=False, idPedido__fechado=True).order_by(
+        'idPedido__idSupervisor',
+        'idPedido__idVendedor',
+        'idPedido__dtPedido',
+        'idPedido')
+    return render(request, 'DjPedido/listPedidosFechado.html', {'itensPedidosFechado': itensPedidosFechado})
 
 

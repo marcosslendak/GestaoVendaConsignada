@@ -79,8 +79,8 @@ class Item(models.Model):
     REPORT_BUILDER_INCLUDE = []
     descricao = models.CharField(max_length=60, verbose_name='Descrição')
     ean = models.CharField(max_length=13, verbose_name='EAN')
-    precoCusto = models.DecimalField(max_digits=8, decimal_places=2, verbose_name='Preço custo')
-    preco = models.DecimalField(max_digits=8, decimal_places=2, verbose_name='Preço')
+    precoCusto = models.DecimalField(max_digits=8, decimal_places=2, verbose_name='Preço custo unitário')
+    preco = models.DecimalField(max_digits=8, decimal_places=2, verbose_name='Preço unitário')
     estoqueAtual = models.IntegerField(default=1, blank=False, verbose_name='Estoque atual')
 
     class Meta:

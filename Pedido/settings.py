@@ -197,9 +197,10 @@ SUIT_CONFIG = {
                {'label': u'Devolução', 'icon': 'icon-share', 'url': '/admin/DjPedido/pedidodevolucao/'},
            )},
            '-',
-           {'label': 'Relatório', 'icon': 'icon-th-list', 'models': (
-               {'label': u'Lista devoluções de pedidos', 'blank': True, 'icon': 'icon-th-list', 'url': '/pdlist'},
-               {'label': 'Listado de fichas de problemas', 'blank': True, 'icon': 'icon-th-list', 'url': '/problemas/'},
+           {'label': 'Relatórios', 'icon': 'icon-th-list', 'models': (
+               {'label': u'Lista pedidos em solicitação', 'icon': 'icon-th-list', 'url': '/listPedidosSolicitacao'},
+               {'label': u'Lista pedidos em devolução', 'icon': 'icon-th-list', 'url': '/listPedidosDevolucao'},
+               {'label': u'Lista pedidos já fechado', 'icon': 'icon-th-list', 'url': '/listPedidosFechado'},
            )},
 
 
