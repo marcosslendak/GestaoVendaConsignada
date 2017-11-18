@@ -202,7 +202,8 @@ SUIT_CONFIG = {
                {'label': u'Lista pedidos em devolução', 'icon': 'icon-th-list', 'url': '/listPedidosDevolucao'},
                {'label': u'Lista pedidos já fechado', 'icon': 'icon-th-list', 'url': '/listPedidosFechado'},
            )},
-
+           '-',
+           {'label': 'Informações', 'icon': 'icon-question-sign', 'url': '/informacoes'},
 
        ),
 

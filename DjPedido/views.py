@@ -43,3 +43,5 @@ def listPedidosFechado(request):
     return render(request, 'DjPedido/listPedidosFechado.html', {'itensPedidosFechado': itensPedidosFechado})
 
 
+def informacoes(request):
+    return render(request, 'DjPedido/informacoes.html', {})

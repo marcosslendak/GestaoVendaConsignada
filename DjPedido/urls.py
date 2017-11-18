@@ -10,6 +10,7 @@ urlpatterns = [
     url(r'^listPedidosSolicitacao/', views.listPedidosSolicitacao),
     url(r'^listPedidosDevolucao/', views.listPedidosDevolucao),
     url(r'^listPedidosFechado/', views.listPedidosFechado),
+    url(r'^informacoes/', views.informacoes),
 
 
 

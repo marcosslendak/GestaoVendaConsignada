@@ -1,0 +1,76 @@
+        <script language='javascript' type='text/javascript'>
+
+           function minhaFuncaoOnMouseOver(objTR)
+           {
+              objTR.style.background='#DDDDDD';
+           }
+
+           function minhaFuncaoOnMouseOut(objTR)
+           {
+              objTR.style.background='#FFFFFF';
+           }
+
+           function minhaFuncaoOnClick()
+           {
+              window.location.href='minhaURL.html';
+           }
+
+        </script>
+
+    {% extends 'base.html' %}
+    {% load humanize %}
+    {% load mathfilters %}
+    {% load tags %}
+    <title>{% block title %}Gestão de Venda Consignada{% endblock %}</title>
+
+    {% csrf_token %}
+
+    {% block sidebar %}
+        <li class="active">Informações</li>
+    {% endblock %}
+
+    {% block content %}
+        {{ form.as_p }}
+        {{ block.super }}
+
+        <div>
+
+            <br>
+            <br>
+            <br>
+            <p align="center">
+                <font size="3"><b>ULBRA - UNIVERSIDADE LUTERANA DO BRASIL</b></font>
+            </p>
+            <br>
+            <p align="center">
+                <font size="3"><b>ULBR@ - EAD</b></font>
+            </p>
+            <br>
+            <br>
+            <p align="center">
+                <font size="3"><b>Curso Superior de Tecnologia em Sistemas para Internet</b></font>
+            </p>
+            <br>
+            <p align="center">
+                <font size="3"><b>Projeto Tecnologico em Sistemas para Internet</b></font>
+            </p>
+            <br>
+            <p align="center">
+                <font size="3"><b>Etapa - Implementação e Implantação</b></font>
+            </p>
+            <br>
+            <br>
+            <p align="center">
+                <font size="3"><b>Aluno: Antônio Marcos Krug Slendak</b></font>
+            </p>
+            <br>
+            <p align="center">
+                <font size="3"><b>CGU: 6474215</b></font>
+            </p>
+            <br>
+            <p align="center">
+                <font size="3"><b>e-mail: marcos.slendak@gmail.com</b></font>
+            </p>
+        </div>
+
+    {% endblock content %}

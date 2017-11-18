@@ -2,230 +2,124 @@
 <!DOCTYPE html>
 <html lang="pt-br" >
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>{% block title %}Base Gestão de Venda Consignada{% endblock %}</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{% block title %}Base Gestão de Venda Consignada{% endblock %}</title>
 
-  <link rel="stylesheet" type="text/css" href=""/>
-  <link rel="stylesheet" type="text/css" href="{% static 'suit/bootstrap/css/bootstrap.min.css' %}" media="all"/>
-  <link rel="stylesheet" type="text/css" href="{% static 'suit/css/suit.css' %}" media="all">
+    <link rel="stylesheet" type="text/css" href=""/>
+    <link rel="stylesheet" type="text/css" href="{% static 'suit/bootstrap/css/bootstrap.min.css' %}" media="all"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'suit/css/suit.css' %}" media="all">
 
-  <script type="text/javascript">window.__admin_media_prefix__ = "{% static '/admin/' %}";</script>
-  <script src="{% static 'suit/js/jquery-2.2.4.min.js' %}"></script>
+    <script type="text/javascript">window.__admin_media_prefix__ = "{% static '/admin/' %}";</script>
+    <script src="{% static 'suit/js/jquery-2.2.4.min.js' %}"></script>
 
-  <script type="text/javascript" src="{% static 'suit/js/jquery.mask.js' %}"></script>
-  <script type="text/javascript">var Suit = { $: $.noConflict() }; if (!$) $ = Suit.$; </script>
-  <script src="{% static 'suit/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'suit/js/jquery.mask.js' %}"></script>
+    <script type="text/javascript">var Suit = { $: $.noConflict() }; if (!$) $ = Suit.$; </script>
+    <script src="{% static 'suit/bootstrap/js/bootstrap.min.js' %}"></script>
 
-  <style type="text/css">.required:after { content: '*'; margin: 0 0 0 5px; position: absolute; color: #ccc;}</style>
-
-
+    <style type="text/css">.required:after { content: '*'; margin: 0 0 0 5px; position: absolute; color: #ccc;}</style>
 
     <meta name="robots" content="NONE,NOARCHIVE"/>
 </head>
 
 
 <body class="dashboard">
-    <!-- Sticky footer wrap -->
-    <div id="wrap">
-        <!-- Container -->
-        <div id="container">
-            <!-- Header -->
-            {% block header %} {% endblock %}
-            <!-- END Header -->
-
-            <div class="suit-columns two-columns">
-                <div id="suit-center" class="suit-column">
-
-                    <ul class="breadcrumb">
-                        <li><a href="/admin/">Início</a>
-                            <span class="divider">&raquo;</span>
-                        </li>
-                        <!-- <li class="active">Djpedido</li> -->
-                        <!-- <li class="active">Relatório</li> -->
-                        {% block sidebar %}
-                        {% endblock %}
-
-                    </ul>
-
-                    <!-- Content -->
-                    {% block content %} {% endblock content %}
-                    <!-- END Content -->
-
-                </div>
-
-<!--
-                <div id="suit-left" class="suit-column">
-                    <form class="form-search nav-quick-search" autocomplete="off" action="/admin/auth/user/" method="GET">
-                        <input type="text" name="q" class="input-medium search-query" id="quick-search">
-                        <i class="input-icon icon-search"></i>
-                        <input type="submit" class="submit" value="">
-                    </form>
-                    <div class="left-nav" id="left-nav">
-                        <ul>
-                            <li><a href="/admin/"><i class="icon-home"></i>Início</a></li>
-                            <li><a href="/cliente/"><i class="icon-edit"></i>Cadastro</a>
-                                <ul>
-                                    <li><a href="/cliente/">Cliente</a></li>
-                                    <li><a href="/admin/DjPedido/item/">Item</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="/admin/DjPedido/pedido/"><i class="icon-keyboard"></i>Pedido</a></li>
-                            <li><a href="/admin/auth/user/"><i class="icon-cog"></i>Settings</a>
-                                <ul>
-                                    <li><a href="/admin/auth/user/">Usuários</a></li>
-                                    <li><a href="/admin/auth/group/">Grupos</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
--->
-
-
-           <div id="suit-left" class="suit-column">
-
-
-
-                    <form class="form-search nav-quick-search" autocomplete="off" action="/admin/auth/user/" method="GET">
-                      <input type="text" name="q" class="input-medium search-query" id="quick-search">
-                      <i class="input-icon icon-search"></i>
-                      <input type="submit" class="submit" value="">
-                    </form>
-
-
-
-
-
-
-
-
-<div class="left-nav" id="left-nav">
-  <ul>
-
-
-      <li class="active">
-        <a href="/admin/"><i class="icon-home"></i>Início
-        </a>
-      </li>
-
-
-
-
-
-
-          <li class="separator"></li>
-
-
-
-          <li>
-            <a href="/admin/DjPedido/item/"><i class="icon-edit"></i>Cadastros
-            </a>
-
-              <ul>
-
-                  <li>
-                    <a href="/admin/DjPedido/item/">Itens</a></li>
-
-                  <li>
-                    <a href="/admin/DjPedido/colaborador/">Colaboradores</a></li>
-
-                  <li>
-                    <a href="/admin/DjPedido/supervisor/">Supervisores</a></li>
-
-                  <li>
-                    <a href="/admin/DjPedido/vendedor/">Vendedores</a></li>
-
-              </ul>
-
-          </li>
-
-
-
-          <li class="separator"></li>
-
-
-
-          <li>
-            <a href="/admin/DjPedido/pedidosolicitacao/"><i class="icon-share"></i>Pedido
-            </a>
-
-              <ul>
-
-                  <li>
-                    <a href="/admin/DjPedido/pedidosolicitacao/">Solicitação</a></li>
-
-                  <li>
-                    <a href="/admin/DjPedido/pedidodevolucao/">Devolução</a></li>
-
-              </ul>
-
-          </li>
-
-
-
-          <li class="separator"></li>
-
-
-
-          <li>
-            <a href="/listPedidosSolicitacao"><i class="icon-th-list"></i>Relatórios
-            </a>
-
-              <ul>
-
-                  <li>
-                    <a href="/listPedidosSolicitacao">Lista pedidos em solicitação</a></li>
-
-                  <li>
-                    <a href="/listPedidosDevolucao">Lista pedidos em devolução</a></li>
-
-                  <li>
-                    <a href="/listPedidosFechado">Lista pedidos já fechado</a></li>
-
-              </ul>
-
-          </li>
-
-
-
-  </ul>
-</div>
-
+<!-- Sticky footer wrap -->
+<div id="wrap">
+    <!-- Container -->
+    <div id="container">
+        <!-- Header -->
+        {% block header %} {% endblock %}
+        <!-- END Header -->
+
+        <div class="suit-columns two-columns">
+            <div id="suit-center" class="suit-column">
+
+                <ul class="breadcrumb">
+                    <li><a href="/admin/">Início</a>
+                        <span class="divider">&raquo;</span>
+                    </li>
+                    <!-- <li class="active">Djpedido</li> -->
+                    <!-- <li class="active">Relatório</li> -->
+                    {% block sidebar %}
+                    {% endblock %}
+                </ul>
+
+                <!-- Content -->
+                {% block content %} {% endblock content %}
+                <!-- END Content -->
 
             </div>
 
-
-
-
-
-
-
+            <div id="suit-left" class="suit-column">
+                <form class="form-search nav-quick-search" autocomplete="off" action="/admin/auth/user/" method="GET">
+                    <input type="text" name="q" class="input-medium search-query" id="quick-search">
+                    <i class="input-icon icon-search"></i>
+                    <input type="submit" class="submit" value="">
+                </form>
+                <div class="left-nav" id="left-nav">
+                    <ul>
+                        <li class="active">
+                            <a href="/admin/"><i class="icon-home"></i>Início</a>
+                        </li>
+                        <li class="separator"></li>
+                        <li>
+                            <a href="/admin/DjPedido/item/"><i class="icon-edit"></i>Cadastros
+                            </a>
+                            <ul>
+                                <li><a href="/admin/DjPedido/item/">Itens</a></li>
+                                <li><a href="/admin/DjPedido/colaborador/">Colaboradores</a></li>
+                                <li><a href="/admin/DjPedido/supervisor/">Supervisores</a></li>
+                                <li><a href="/admin/DjPedido/vendedor/">Vendedores</a></li>
+                            </ul>
+                        </li>
+                        <li class="separator"></li>
+                        <li>
+                            <a href="/admin/DjPedido/pedidosolicitacao/"><i class="icon-share"></i>Pedido</a>
+                            <ul>
+                                <li><a href="/admin/DjPedido/pedidosolicitacao/">Solicitação</a></li>
+                                <li><a href="/admin/DjPedido/pedidodevolucao/">Devolução</a></li>
+                            </ul>
+                        </li>
+                        <li class="separator"></li>
+                        <li>
+                            <a href="/listPedidosSolicitacao"><i class="icon-th-list"></i>Relatórios</a>
+                            <ul>
+                                <li><a href="/listPedidosSolicitacao">Lista pedidos em solicitação</a></li>
+                                <li><a href="/listPedidosDevolucao">Lista pedidos em devolução</a></li>
+                                <li><a href="/listPedidosFechado">Lista pedidos já fechado</a></li>
+                            </ul>
+                        </li>
+                        <li class="separator"></li>
+                        <li><a href="/informacoes"><i class="icon-question-sign"></i>Informações</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <!-- Sticky footer push -->
-        <div id="push"></div>
     </div>
-    {% block footer %}{% endblock %}
+    <!-- Sticky footer push -->
+    <div id="push"></div>
+</div>
+{% block footer %}{% endblock %}
 </body>
 </html>
 
-    <!--css's-->
-    <!--
+<!--css's-->
+<!--
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <link rel="stylesheet" href="{% static 'css/vendor/css/font-awesome.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/vendor/css/star-rating.min.css' %}">
     -->
 
-    <!--image's-->
-    <!--
+<!--image's-->
+<!--
     <img alt="Brand" src="{% static 'img/logo-pt__large.png' %}">
     -->
 
 
 
 
-    <!--js's-->
-    <!--
+<!--js's-->
+<!--
     <script src="{% static 'js/vendor/jquery.min.js' %}"></script>
     <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
     <script src="{% static 'js/vendor/star-rating.min.js' %}"></script>
