@@ -2,7 +2,7 @@ Babel==2.5.0
 #Brlapi==0.6.1
 Django==1.11.4
 #LibAppArmor==2.10.95
-Mako==0.9.1
+Mako==1.2.2
 MarkupSafe==0.18
 #apparmor==2.10.95
 #apparmor.click==0.2ubuntu1
